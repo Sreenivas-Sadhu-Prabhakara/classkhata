@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClassKhata — Coaching-Class Manager</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238e1f24'/%3E%3Ctext x='16' y='22.5' font-size='17' font-family='Georgia,serif' fill='%23f6efdd' text-anchor='middle'%3E%E2%82%B9%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <div class="scrim" id="scrim"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">₹</div>
+      <div>
+        <div class="brand-name">ClassKhata</div>
+        <div class="brand-sub">Coaching-class manager</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#/dashboard" data-route="dashboard">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard</a>
+      <a href="#/batches" data-route="batches">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Batches</a>
+      <a href="#/students" data-route="students">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Students</a>
+      <a href="#/attendance" data-route="attendance">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 15.5 11 17.5 15 13.5"/></svg>
+        Attendance</a>
+      <a href="#/fees" data-route="fees">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 7.5h7M8.5 10.5h7M9 7.5c3.2 0 4.6 1.2 4.6 3 0 2-1.7 3-4 3l4.4 4"/></svg>
+        Fees</a>
+      <a href="#/outbox" data-route="outbox">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Outbox <span class="nav-badge" id="outboxBadge" hidden></span></a>
+    </nav>
+    <div class="sidebar-foot">
+      <button class="btn btn-demo" id="demoBtn">Load demo data</button>
+      <div class="anchor-chip">Books dated <strong>Fri, 17 Jul 2026</strong></div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <h1 id="pageTitle">Dashboard</h1>
+      <span class="page-meta" id="pageMeta"></span>
+    </header>
+    <div class="view" id="view"></div>
+  </main>
+</div>
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+<script src="/app.js"></script>
+</body>
+</html>
